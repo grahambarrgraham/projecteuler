@@ -1,5 +1,4 @@
-# https://projecteuler.net/problem=8
-from numpy import product
+# https://projecteuler.net/problem=13
 
 input_ = """
 37107287533902102798797998220837590246510135740250

@@ -8,7 +8,7 @@ from problems.problem_3_largest_prime_factor import prime_factors
 
 
 # factors can be calculated more efficiently from prime factors, which themselves
-# can be efficient derived from a factorisation tree.
+# can be efficiently derived from a factorisation tree.
 # https://math.stackexchange.com/questions/2782625/how-to-get-all-the-factors-of-a-number-using-its-prime-factorization
 def num_factors(n: int):
     p = prime_factors(n)
@@ -16,15 +16,6 @@ def num_factors(n: int):
     for i in range(1, len(p)):
         result += len(set(combinations(p, i)))
     return result
-
-
-def fast_factors(n: int):
-    p = prime_factors(n)
-    all_factors = {1, n}
-    for i in range(1, len(p)):
-        c = [product(s) for s in set(combinations(p, i))]
-        all_factors.update(c)
-    return all_factors
 
 
 def triangle_numbers():

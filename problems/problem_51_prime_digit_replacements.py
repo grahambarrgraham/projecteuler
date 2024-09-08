@@ -1,6 +1,5 @@
 # https://projecteuler.net/problem=51
 from collections import Counter
-from itertools import permutations
 from time import time
 
 from problems.problem_7_find_nth_prime import is_prime

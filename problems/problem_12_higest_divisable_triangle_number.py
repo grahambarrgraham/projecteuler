@@ -18,6 +18,13 @@ def num_factors(n: int):
     return result
 
 
+# def triangle_numbers():
+#     i = 1
+#     while True:
+#         yield (i * (i + 1)) // 2
+#         i += 1
+
+
 def triangle_numbers():
     triangle_number = 1
     yield triangle_number
@@ -38,5 +45,6 @@ def highly_divisible_triangle_number(max_divisors):
 # includes sum of subsequent triangular numbers is a square number, and fast test for
 # triangle number 'So an integer x is triangular if and only if 8x + 1 is a square.'
 
-now = time()
-print(highly_divisible_triangle_number(500), f"{time() - now} seconds")
+if __name__ == "__main__":
+    now = time()
+    print(highly_divisible_triangle_number(500), f"{round(time() - now, 2)} seconds")

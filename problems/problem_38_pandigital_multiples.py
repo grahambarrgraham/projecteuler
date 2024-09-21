@@ -25,7 +25,8 @@ def pandigital_multiples():
     return results
 
 
-now = time()
-result = pandigital_multiples()
-print(result)
-print(max(result), f"{round(time() - now, 2)} seconds")
+if __name__ == "__main__":
+    now = time()
+    result = pandigital_multiples()
+    print(result)
+    print(max(result), f"{round(time() - now, 2)} seconds")

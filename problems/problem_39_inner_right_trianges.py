@@ -9,7 +9,7 @@ def is_right_angled(a, b, c) -> int:
 
 
 def inner_right_triangles(p):
-    return [(a, b, p - a - b) for a in range(1, p) for b in range(a, p) if is_right_angled(a, b, p - a - b)]
+    return [(a, b, p - a - b) for a in range(1, p) for b in range(a, p) if a < p - a - b and b < p - a - b and is_right_angled(a, b, p - a - b)]
 
 
 def all_inner_right_triangles(n):

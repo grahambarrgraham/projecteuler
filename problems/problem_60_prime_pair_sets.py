@@ -61,7 +61,10 @@ def prime_pair_set_2(s):
 # print(is_prime_pair_set_2({3, 7, 109, 673}, 29059))
 # print(is_prime_pair_set_2({23, 311, 677, 827}, 29059))
 # print(list(n_primes(125)))
-now = time()
+
 # result = prime_pair_sets(4)
 # print(result)
-print(prime_pair_sets(), f"{round(time() - now, 2)} seconds")
+if __name__ == "__main__":
+    now = time()
+    print(prime_pair_sets(), f"{round(time() - now, 2)} seconds")
+

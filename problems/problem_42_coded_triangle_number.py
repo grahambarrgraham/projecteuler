@@ -2,7 +2,7 @@
 from pathlib import Path
 from time import time
 
-from problems.problem_12_higest_divisable_triangle_number import triangle_numbers
+from problems.problem_12_higest_divisable_triangle_number import triangle_number_gen
 
 
 def is_triangle_word(word, triangle_nums):
@@ -11,7 +11,7 @@ def is_triangle_word(word, triangle_nums):
 
 
 def triangle_numbers_to_n(n):
-    gen = triangle_numbers()
+    gen = triangle_number_gen()
     result = []
     for i in range(n):
         result.append(next(gen))

@@ -18,14 +18,14 @@ def num_factors(n: int):
     return result
 
 
-# def triangle_numbers():
+# def triangle_number_gen():
 #     i = 1
 #     while True:
 #         yield (i * (i + 1)) // 2
 #         i += 1
 
 
-def triangle_numbers():
+def triangle_number_gen():
     triangle_number = 1
     yield triangle_number
     last_val = 1
@@ -36,7 +36,7 @@ def triangle_numbers():
 
 
 def highly_divisible_triangle_number(max_divisors):
-    for triangle_number in triangle_numbers():
+    for triangle_number in triangle_number_gen():
         if num_factors(triangle_number) > max_divisors:
             return triangle_number
 

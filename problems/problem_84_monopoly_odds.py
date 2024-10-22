@@ -32,7 +32,6 @@ class Deck:
             nxt = square - 3
             return nxt if nxt >= 0 else nxt + num_squares
         elif card == 'next railway':
-            # return square
             return r1 if square < r1 else r2 if square < r2 else r3 if square < r3 else r4 if square < r4 else r1
         elif card == 'next utility':
             return u1 if square < u1 else u2 if square < u2 else u1

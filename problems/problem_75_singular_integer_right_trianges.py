@@ -8,6 +8,8 @@ from time import time
 def pythagorean_primitive_triplets_gen(limit_func):
     a, b, c, m = 0, 0, 0, 2
 
+    # Euclid's formula
+
     while limit_func(a, b, c):
         for n in range(1, m):
             a = m * m - n * n
@@ -23,8 +25,8 @@ def pythagorean_primitive_triplets_gen(limit_func):
         m = m + 1
 
 
-# Currently need separate functions to limit generated primitives and non-primitives. as the primitive function
-# needs to be more permissive.  Leaky abstraction.
+# Currently needs separate functions to limit primitives and non-primitives as the primitives limit function
+# usually needs to be more permissive.  It's a leaky abstraction, but leverages Euclid's formula
 def pythagorean_triplets(primitives_limit_func, k_limit_func) -> set[tuple]:
 
     primitives = set(pythagorean_primitive_triplets_gen(primitives_limit_func))

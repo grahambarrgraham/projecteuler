@@ -28,7 +28,7 @@ def is_prime_pair_set_2(s: set[int], n):
     return True
 
 
-def in_primes(start, n):
+def n_primes(start, n):
     i = start
     c = 0
     while c < n:
